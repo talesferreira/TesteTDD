@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2014/07/01 12:31:49.000.929,=D:\Projetos TI\TesteTTD\Test\Unit1.pas</Transaction>
+    <Transaction>2014/07/01 12:32:06.000.354,D:\Projetos TI\TesteTTD\Test\QuestionsInterview.pas=D:\Projetos TI\TesteTTD\Test\Unit1.pas</Transaction>
+    <Transaction>2014/07/01 12:34:20.000.491,D:\Projetos TI\TesteTTD\Test\QuestionsInterview.pas=</Transaction>
+    <Transaction>2014/07/01 12:38:17.000.197,=D:\Projetos TI\TesteTTD\Test\TestQuestionsInterview.pas</Transaction>
+    <Transaction>2014/07/01 12:38:17.000.636,=D:\Projetos TI\TesteTTD\QuestionsInterview.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,48 @@
+unit TestQuestionsInterview;
+
+interface
+
+uses
+  TestFramework, QuestionsInterview, System.SysUtils;
+
+type
+  TestTSampleInterview = class(TTestCase)
+  strict private
+    FSampleInterview: TSampleInterview;
+  public
+    procedure SetUp; override;
+    procedure TearDown; override;
+  published
+    procedure TestIsOdd;
+  end;
+
+implementation
+
+procedure TestTSampleInterview.SetUp;
+begin
+  FSampleInterview := TSampleInterview.Create;
+end;
+
+procedure TestTSampleInterview.TearDown;
+begin
+  FSampleInterview.Free;
+  FSampleInterview := nil;
+end;
+
+procedure TestTSampleInterview.TestIsOdd;
+//var
+  //ReturnValue: Boolean;
+  //ANumber: Integer;
+begin
+  // TODO: Setup method call parameters
+  //ReturnValue := FSampleInterview.IsOdd(ANumber);
+  // TODO: Validate method results
+  CheckTrue(TSampleInterview.IsOdd(4),'Testando se 5 é negativo');
+
+end;
+
+initialization
+  // Register any test cases with the test runner
+  RegisterTest(TestTSampleInterview.Suite);
+end.
+
