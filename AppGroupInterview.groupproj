@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{4E9F8B72-ACE2-4793-A5AB-1FE762E6B655}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="AppInterview.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Test\AppInterviewTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="AppInterview">
+        <MSBuild Projects="AppInterview.dproj"/>
+    </Target>
+    <Target Name="AppInterview:Clean">
+        <MSBuild Projects="AppInterview.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AppInterview:Make">
+        <MSBuild Projects="AppInterview.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AppInterviewTests">
+        <MSBuild Projects="Test\AppInterviewTests.dproj"/>
+    </Target>
+    <Target Name="AppInterviewTests:Clean">
+        <MSBuild Projects="Test\AppInterviewTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AppInterviewTests:Make">
+        <MSBuild Projects="Test\AppInterviewTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="AppInterview;AppInterviewTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="AppInterview:Clean;AppInterviewTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="AppInterview:Make;AppInterviewTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
